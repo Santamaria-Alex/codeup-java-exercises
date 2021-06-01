@@ -38,24 +38,18 @@ public class MothodsExercises {
 
 
     // Exercise 3 //
-    public static int getFactorial (){
-        System.out.printf("");
-        Scanner scanner = new Scanner(System.in);
-        int input = scanner.nextInt();
-
-
-        String outPut = num + "! = ";
-        long fact = num;
-        for (int i = 1; i < num; ++i) {
-            outPut += i + " x ";
-            fact *= i;
-        }
-        outPut += num + " = " + fact;
-        System.out.println(outPut);
-
-
-
-    }
+//    public static int getFactorial (){
+////        System.out.printf("");
+////        Scanner scanner = new Scanner(System.in);
+////        int input = scanner.nextInt();
+//
+//
+//
+//
+//
+//
+//
+//    }
 
 
 
@@ -70,9 +64,23 @@ public class MothodsExercises {
         //Exercise 2 //
         System.out.println(getInteger(1, 10));
 
+//        System.out.printf("Factorial of %d is %d", number, fact);
+
 
 
 
 
     }
 }
+
+
+
+//    String outPut = num + "! = ";
+//    long fact = num;
+//        for (int i = 1; i < num; ++i) {
+//        outPut += i + " x ";
+//        fact *= i;
+//        }
+//        outPut += num + " = " + fact;
+//        System.out.println(outPut);
+
