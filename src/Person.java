@@ -1,6 +1,7 @@
 public class Person {
     private String name;
 
+    // getName() returns a string
     public String getName(){
 //TODO: return the person's name
         return name;
