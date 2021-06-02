@@ -38,18 +38,51 @@ public class MothodsExercises {
 
 
     // Exercise 3 //
-//    public static int getFactorial (){
-////        System.out.printf("");
-////        Scanner scanner = new Scanner(System.in);
-////        int input = scanner.nextInt();
-//
-//
-//
-//
-//
-//
-//
-//    }
+    public static String getFactorial (long num){
+        long factorial = 1L;
+        String result = " = ";
+
+        for (long i = 1L; i <= num; i++){
+            factorial *= i;
+            if (i == num){
+                result += i;
+            } else {
+                result += i + " x ";
+            }
+        }
+        return factorial + result;
+
+    }
+
+
+    public static void diceRoll(int sides, int numberOfDice){
+        for (int i = 1; i <= numberOfDice; i++){
+            int result = (int) Math.floor(Math.random() * ((sides - 1) + 1) + 1);
+            System.out.println(result);
+        }
+    }
+
+
+    public static void diceRoll(){
+        boolean keepGoing = true;
+        while (keepGoing) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("How many sides is the die?");
+            int sides = scanner.nextInt();
+            System.out.println("How many die are you wanting to roll?");
+            int numDice = scanner.nextInt();
+            diceRoll(sides, numDice);
+            scanner.nextLine();
+            String answer = " ";
+            while (!answer.equalsIgnoreCase("yes") && !answer.equalsIgnoreCase("no")){
+                System.out.println("Keep playing? [yes/no]");
+            }
+            if (answer.equalsIgnoreCase("no")){
+                System.out.println("Thanks for playing.");
+                keepGoing = false;
+            }
+        }
+    }
 
 
 
@@ -65,6 +98,8 @@ public class MothodsExercises {
         System.out.println(getInteger(1, 10));
 
 //        System.out.printf("Factorial of %d is %d", number, fact);
+
+
 
 
 
