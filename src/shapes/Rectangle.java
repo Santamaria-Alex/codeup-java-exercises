@@ -1,47 +1,29 @@
 package shapes;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral implements Measurable {
 
-    // It should have protected properties for both length and width.
-    protected int length;
-    protected int width;
-
-    public int getLength() {
-        return length;
+    public Rectangle (double length, double width){
+        super(length, width);
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    @Override
+    public void setLength(double length) {
+
     }
 
-    public int getWidth() {
-        return width;
+    @Override
+    public void setWidth(double width) {
+
     }
 
-    public void setWidth(int width) {
-        this.width = width;
+    @Override
+    public double getPerimeter() {
+        return (length*2) + (width *2);
     }
 
-    /////// default constructor ///////
-    public Rectangle(){}
+    @Override
+    public double getArea() {
+        return length * width;
 
-    // Rectangle should define a constructor that accepts two numbers for length and width, and sets those properties.
-    public Rectangle (int length, int width){
-        this.setLength(length);
-        this.setWidth(width);
     }
-
-
-
-
-    //Create two methods on the Rectangle class, getArea and getPerimeter that return the respective values.
-    public int getArea(){
-        return this.getLength() * this.getWidth();
-    }
-
-    public int getPerimeter(){
-        return (2 * this.getLength()) + (2 * this.getWidth());
-    }
-
-
 }
