@@ -75,6 +75,29 @@ public class Input {
     }
 
 
+//    public int getInt2(){
+//        try {
+//            return Integer.parseInt(getString("Enter a number"));
+//        } catch (NumberFormatException e) {
+//            System.err.println("Invalid input, try again.");
+//            return getInt2();
+//        }
+//    }
+
+    public int getInt2(){
+        String userInput = getString();
+        try{
+            Integer.valueOf(userInput);
+        }catch(NumberFormatException nfe){
+            System.out.println("That's not a number!");
+            getInt();
+        }
+        return Integer.parseInt(userInput);
+    }
+
+
+
+
 
 
 
